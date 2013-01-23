@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Erikt_Helloworld>
+            <version>0.1.0</version>
+        </Erikt_Helloworld>
+    </modules>
+    <frontend>
+        <routers>
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Erikt_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+    </frontend>
+</config>

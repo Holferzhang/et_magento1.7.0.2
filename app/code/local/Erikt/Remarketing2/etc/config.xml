@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Erikt_Remarketing2>
+            <version>0.1.0</version>
+        </Erikt_Remarketing2>
+    </modules>
+    <frontend>
+        <routers>
+            <remarketing2>
+                <use>standard</use>
+                <args>
+                    <module>Erikt_Remarketing2</module>
+                    <frontName>remarketing2</frontName>
+                </args>
+            </remarketing2>
+        </routers>
+    </frontend>
+</config>

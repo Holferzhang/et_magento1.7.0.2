@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Erikt_Remarketing2>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Erikt_Remarketing2>
+    </modules>
+</config>
