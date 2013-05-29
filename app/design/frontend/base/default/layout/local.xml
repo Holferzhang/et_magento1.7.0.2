@@ -1,0 +1,10 @@
+<layout version="0.1.0">
+	<default>
+		<reference name="after_body_start">
+			<block type="remarketing2/pixel" name="pixel" as="pixel" template="remarketing2/pixel.phtml" />
+		</reference>
+		<reference name="before_body_end">
+			<block type="core/template" name="pixel2" as="pixel2" template="remarketing2/pixel.phtml" />
+		</reference>
+	</default>
+</layout>
