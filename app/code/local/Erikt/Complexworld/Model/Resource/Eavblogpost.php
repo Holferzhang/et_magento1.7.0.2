@@ -1,8 +1,14 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: erik
- * Date: 2/20/13
- * Time: 9:10 PM
- * To change this template use File | Settings | File Templates.
- */
+
+class Erikt_Complexworld_Model_Resource_Eavblogpost extends Mage_Eav_Model_Entity_Abstract
+{
+	protected function _construct()
+	{
+		$resource = Mage::getSingleton('core/resource');
+		$this->setType('complexworld_eavblogpost');
+		$this->setConnection(
+			$resource->getConnection('complexworld_read'),
+			$resource->getConnection('complexworld_write')
+		);
+	}
+}

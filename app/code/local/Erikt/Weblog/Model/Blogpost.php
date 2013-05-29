@@ -1,8 +1,11 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: erik
- * Date: 2/13/13
- * Time: 8:27 PM
- * To change this template use File | Settings | File Templates.
- */
+
+class Erikt_Weblog_Model_Blogpost extends Mage_Core_Model_Abstract
+{
+	protected function _construct()
+	{
+		$this->_init('weblog/blogpost');
+	}
+
+
+}
