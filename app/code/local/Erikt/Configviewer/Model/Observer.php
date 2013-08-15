@@ -10,6 +10,9 @@ class Erikt_Configviewer_Model_Observer {
 		if($this->request->{self::FLAG_SHOW_CONFIG} === 'true'){
 			$this->setHeader();
 			$this->outputConfig();
+		} elseif (in_array($this->request->{self::FLAG_SHOW_CONFIG}, array('default', 'adminhtml', 'admin', 'crontab', 'global', 'modules', 'frontend', 'menu', 'acl', 'api'))) {
+			$this->setHeader();
+			$this->outputConfig($this->request->{self::FLAG_SHOW_CONFIG});
 		}
 	}
 
@@ -25,7 +28,7 @@ class Erikt_Configviewer_Model_Observer {
 		}
 	}
 
-	private function outputConfig() {
-		die(Mage::app()->getConfig()->getNode()->asXML());
+	private function outputConfig($type=null) {
+		die(Mage::app()->getConfig()->getNode($type)->asXML());
 	}
 }
